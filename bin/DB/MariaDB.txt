@@ -1,0 +1,30 @@
+database Script
+
+//Create database:
+
+CREATE DATABASE IF NOT EXISTS clientsys;
+
+//Set the database
+USE clientsys;
+
+//Create table
+CREATE TABLE IF NOT EXISTS clients (
+	client_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	client_name VARCHAR(200), client_cnpj int, client_address VARCHAR(300), client_phone int, client_email VARCHAR(100));
+
+//Show tables
+show tables;
+
+//INSERT
+INSERT INTO clients (client_name, client_cnpj, client_address, client_phone, client_email) VALUES ('Cristiano Uniga Bajdiuk', 00724918654, 'Santo Antonio 597 apt 161A', 11970580385, 'cristianouniga@gmail.com');
+INSERT INTO clients (client_name, client_cnpj, client_address, client_phone, client_email) VALUES ('marina de souza michel', 40493845828, 'Rua camandula 112', 985556932, 'marinasmichel@hotmail.com');
+INSERT INTO clients (client_name, client_cnpj, client_address, client_phone, client_email) VALUES ('teste', 12345, 'teste de teste', 235689, 'teste@teste.com')
+
+ //Describe <table> Show the table structure
+
+ //Alterar o tipo de dado da coluna
+ MODIFY COLUMN XXX <new type>
+ 
+ CREATE TABLE IF NOT EXISTS clients (
+	client_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	client_name VARCHAR(200), client_cnpj DECIMAL(10), client_address VARCHAR(300), client_phone bigint(20), client_email VARCHAR(100));
